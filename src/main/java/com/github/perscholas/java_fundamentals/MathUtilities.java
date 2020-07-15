@@ -83,7 +83,7 @@ public class MathUtilities {
      */
     public Long subtract(long baseValue, long difference) {
         Long result = (long) (baseValue - difference);
-        return null;
+        return result;
     }
 
     /**
@@ -204,7 +204,7 @@ public class MathUtilities {
      * @return product of `multiplicand` by `multiplier`
      */
     public Long multiply(long multiplicand, long multiplier) {
-        Long result = (long) (multiplicand * multiplier);
+        long result = (long) (multiplicand * multiplier);
         return result;
     }
 

@@ -18,7 +18,7 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-      String result = "firstSegment" + "secondSegment";
+      String result = firstSegment + secondSegment;
         return result;
     }
 
@@ -28,7 +28,7 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        String result = String.valueOf(firstSegment) + "secondSegment";
+        String result = String.valueOf(firstSegment) + secondSegment;
         return result;
     }
 
@@ -37,7 +37,7 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        String result= input.substring(0,2);
+        String result= input.substring(0,3);
         return result;
     }
 
@@ -46,7 +46,7 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        String result= input.substring(input.length()-3,input.length() - 1);
+        String result= input.substring(input.length()-3);
         return result;
     }
 
@@ -65,7 +65,7 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        int stringLength =inputValue.length() ;
+        int stringLength =inputValue.length() -1;
 
         int middle = stringLength/2 ;
 
@@ -97,10 +97,10 @@ public class StringUtilities {
      */
     public static String reverse(String stringToReverse) {
         // convert String to character array // by using toCharArray
-        char[] charArray = stringToReverse.toCharArray();
         String result = "";
-        for (int i = charArray.length - 1; i >= 0; i--) {
-             result = (charArray[i])+ result;
+        for(int i= stringToReverse.length(); i>0; i--){
+            Character lastChar= stringToReverse.charAt(i-1);
+            result +=  lastChar;
         }
         return result;
     }
